@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Generation Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div id="game">
+            <h1>Number Generation Game</h1>
+            <p>Click the button to generate three random numbers and play the game!</p>
+        
+            <div>
+                <input type="number" id="num1" class="number" readonly>
+                <input type="number" id="num2" class="number" readonly>
+                <input type="number" id="num3" class="number" readonly>
+            </div>
+        
+            <p><strong>Remaining Score:</strong> <span id="score">500</span></p>
+            <button onclick="playGame()">Play Game</button>
+            
+            <div id="result"></div>
+        </div>
+        <div class="rules-container">
+            <h2>Game Rules</h2>
+            <p>1. Three random numbers between 1 and 9 will be generated.</p>
+            <p>2. Based on the numbers, your score will be updated according to these conditions:</p>
+            <ul>
+                <li><span class="important">All Numbers Same:</span> If all three numbers are the same, you will get <strong>1000 INR</strong>.</li>
+                <li><span class="important">All Numbers Even or All Numbers Odd:</span> If all three numbers are either even or odd, you will get <strong>300 INR</strong>.</li>
+                <li><span class="important">Numbers with a Difference of 1:</span> If the numbers have a difference of 1 between them (e.g., 1, 2, 3), you will get <strong>800 INR</strong>.</li>
+                <li><span class="important">No Winning Conditions:</span> If none of the conditions are met, you will not get any score.</li>
+            </ul>
+            <p>3. In each round, <strong>100 points will be deducted</strong> from your score.</p>
+            <p>4. If your score drops to 0 or below, the game ends and shows "<strong>Game Over</strong>".</p>
+            <p>Good luck and have fun!</p>
+        </div>
+    </div>
+
+<script src="index.js"></script>
+</body>
+</html>
